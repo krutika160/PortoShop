@@ -11,6 +11,7 @@ import {
   FaShoppingBag,
   FaPhoneAlt,
   FaAngleDown,
+  FaBars,
 } from "react-icons/fa";
 
 const MainHeader = () => {
@@ -29,15 +30,22 @@ const MainHeader = () => {
 
         <div className="main-header-wrapper">
 
+          <div className="left-mibile-menu">
+          <a href="#" className="main-icon d-block d-lg-none">
+            <FaBars />
+          </a>
+
           {/* LOGO */}
           <div className="logo">
 
             <img src={logo} alt="logo" />
 
           </div>
+          </div>
+
 
           {/* SEARCH */}
-          <div className="header-search">
+          <div className="header-search d-none d-lg-flex">
 
             <input
               type="text"
@@ -234,7 +242,7 @@ const MainHeader = () => {
           <div className="header-right">
 
             {/* CALL */}
-            <div className="header-call">
+            <div className="header-call d-none d-lg-flex">
 
               <FaPhoneAlt className="call-icon" />
 
@@ -250,6 +258,10 @@ const MainHeader = () => {
 
             {/* ICONS */}
             <div className="header-icons">
+
+              <a href="#" className="search-icon main-icon d-block d-lg-none">
+                <FaSearch />
+              </a>
 
               <a href="#" className="main-icon">
                 <FaRegUser />

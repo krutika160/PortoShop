@@ -22,7 +22,7 @@
 
 .top-bar-left p{
   margin: 0;
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.3px;
@@ -171,4 +171,18 @@
   height: 14px;
   background: var(--white-color);
   transform: rotate(45deg);
+}
+
+
+
+@media (max-width: 575px){
+  .top-bar-wrapper{
+    justify-content: end;
+  }
+  .top-bar-left{
+    display: none;
+  }
+   .top-dropdowns{
+    border: none;
+  }
 }

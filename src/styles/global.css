@@ -48,9 +48,11 @@ html{
   --white-color: #fff;
   --black-color: #000;
   --border-color: #e7e7e7;
+  --footer-border: #31363d;
   --bg-light: #f4f4f4;
   --danger-color: #ff3c3c;
   --light-color: #bde1f5;
+  --footer-text: #a8a8a8;
 
   /* Fonts */
   --primary-font: 'Poppins', sans-serif;

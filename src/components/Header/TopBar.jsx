@@ -37,7 +37,7 @@ const TopBar = () => {
           <div className="top-bar-right">
 
             {/* Menu */}
-            <ul className="top-menu">
+            <ul className="top-menu d-none d-lg-flex">
 
               <li><a href="#">My Account</a></li>
               <li><a href="#">Contact Us</a></li>

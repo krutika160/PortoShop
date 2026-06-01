@@ -1,4 +1,5 @@
 import MainHeader from "./MainHeader";
+import Navbar from "./Navbar";
 import TopBar from "./TopBar";
 
 const Header = () => {
@@ -6,6 +7,7 @@ const Header = () => {
     <>
       <TopBar />
       <MainHeader />
+      <Navbar />
     </>
   );
 };
