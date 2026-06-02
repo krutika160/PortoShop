@@ -1,0 +1,13 @@
+.main-btn {
+    border: none;
+    font-size: 14px;
+    transition: 0.3s;
+    background: var(--black-color);
+    color: var(--white-color);
+    padding: 15px 30px;
+    font-weight: 700;
+}
+
+.main-btn:hover {
+  background: var(--heading-color);
+}
