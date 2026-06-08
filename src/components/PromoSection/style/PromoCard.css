@@ -1,9 +1,25 @@
 .promo-card {
   position: relative;
   overflow: hidden;
-  background: #f5f5f5;
+  background: var(--white-color);
   min-height: 220px;
   cursor: pointer;
+}
+
+.promo-card.watch  .promo-content h3{
+      font-size: 30px;
+    margin-left: auto;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 50%;
+    color: var(--white-color);
+    background: var(--black-color);
+    letter-spacing: -0.08em;
 }
 
 .promo-card img {
@@ -18,27 +34,72 @@
 }
 
 .promo-content {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  z-index: 2;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-left: 10px;
 }
 
 .promo-content h3 {
   font-size: 28px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  text-align: right;
 }
 
 .promo-content p {
   font-size: 14px;
-  margin-bottom: 15px;
+    margin-bottom: 15px;
+    text-align: end;
+    margin-top: 10px;
 }
 
 .promo-content button {
   border: none;
-  background: #111;
-  color: #fff;
+  background: var(--black-color);
+  color: var(--white-color);
   padding: 10px 20px;
   cursor: pointer;
 }
+
+.headphones .promo-content,
+.flshsale .promo-content{
+  color: var(--white-color);
+}
+
+.shoes .promo-content{
+  left: 25px;
+  right: unset;
+}
+
+.shoes .promo-content p,
+.brand .promo-content p{
+  text-align: left;
+}
+
+.shoes .promo-content h3,
+.brand .promo-content h3{
+  text-align: left;
+}
+
+.brand .promo-content{
+    padding: 0;
+    width: 40%;
+    justify-content: start;
+    align-items: start;
+    left: 25px;
+  right: unset;
+}
+
+
+@media (max-width: 992px) {
+  .promo-content h3 {
+    font-size: 20px;
+  }
+}
+
+

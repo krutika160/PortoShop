@@ -3,6 +3,8 @@ import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
 import Features from "../components/Features/Features";
 import PromoSection from "../components/PromoSection/PromoSection";
+import BrandSlider from "../components/BrandSlider/BrandSlider";
+import FeaturedProducts from "../components/FeaturedProducts/FeaturedProducts";
 
 
 
@@ -15,7 +17,11 @@ const Home = () => {
 
       <Features /> 
 
-      <PromoSection />    
+      <PromoSection />  
+
+      <FeaturedProducts /> 
+
+      <BrandSlider /> 
 
       <Footer />
     </>

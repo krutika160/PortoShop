@@ -1,0 +1,295 @@
+.featured-products {
+  padding: 50px 0 30px;
+}
+
+/* HEADER */
+
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-title {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.section-title h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+/* PAGINATION */
+
+.featured-pagination {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  width: fit-content !important;
+}
+
+.featured-pagination .swiper-pagination-bullet {
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border: 2px solid var(--black-color);
+  border-radius: 50%;
+  opacity: 1;
+  margin: 0 6px !important;
+  position: relative;
+}
+
+.featured-pagination .swiper-pagination-bullet-active {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+}
+
+.featured-pagination .swiper-pagination-bullet-active::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* SWIPER */
+
+.featured-products .swiper {
+  overflow: hidden;
+}
+
+.featured-products .swiper-wrapper {
+  align-items: stretch;
+}
+
+.featured-products .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+/* CARD */
+
+.featured-card {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-image {
+  position: relative;
+  overflow: hidden;
+  background: var(--light-color);
+  aspect-ratio: 1 / 1;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* LABELS */
+
+.hot-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  background: var(--green-color);
+  color: var(--white-color);
+
+  padding: 5px 12px;
+  border-radius: 20px;
+
+  font-size: 12px;
+  z-index: 2;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 50px;
+  left: 15px;
+
+  background: var(--danger-color);
+  color: var(--white-color);
+
+  padding: 5px 12px;
+  border-radius: 20px;
+
+  font-size: 12px;
+  z-index: 2;
+}
+
+/* HOVER */
+
+.hover-actions {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.featured-card:hover .hover-actions {
+  opacity: 1;
+}
+
+.cart-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: var(--white-color);
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quick-view {
+  width: 100%;
+  border: none;
+
+  background: var(--primary-color);
+  color: var(--white-color);
+
+  padding: 15px;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  margin-top: auto;
+}
+
+/* CONTENT */
+
+.featured-content {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.content-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-top span {
+  color: var(--text-color);
+  font-size: 10px;
+}
+
+.content-top svg {
+  cursor: pointer;
+}
+
+.content-top svg path {
+  stroke: var(--text-color);
+}
+
+.content-top svg:hover path {
+  fill: var(--primary-color);
+  stroke: var(--primary-color);
+}
+
+.featured-content h3 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--black-color);
+}
+
+.rating {
+  display: flex;
+  gap: 4px;
+  color: var(--text-color);
+  margin-top: 4px;
+}
+
+.price {
+  margin-top: 12px;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.price del {
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.price strong {
+  font-size: 18px;
+  color: var(--black-color);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .featured-header {
+    margin-bottom: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-title h2 {
+    font-size: 22px;
+  }
+
+  .featured-content h3 {
+    font-size: 15px;
+  }
+
+  .price strong {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .featured-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .featured-pagination {
+    padding-bottom: 0;
+  }
+
+  .section-title h2 {
+    font-size: 20px;
+  }
+
+  .featured-content {
+    padding-top: 15px;
+  }
+
+  .price {
+    margin-top: 8px;
+  }
+}

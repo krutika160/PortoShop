@@ -1,5 +1,7 @@
 import "./style/MainHeader.css";
 
+import MobileMenu from "./MobileMenu";
+
 import { useState } from "react";
 
 import logo from "../../assets/images/logo.png";
@@ -16,6 +18,8 @@ import {
 
 const MainHeader = () => {
 
+  const [isOpen, setIsOpen] = useState(false);
+
   /* DROPDOWN OPEN/CLOSE */
   const [showCategory, setShowCategory] = useState(false);
 
@@ -31,9 +35,12 @@ const MainHeader = () => {
         <div className="main-header-wrapper">
 
           <div className="left-mibile-menu">
-          <a href="#" className="main-icon d-block d-lg-none">
-            <FaBars />
-          </a>
+          <a href="#"
+          className="main-icon mobile-menu-btn d-block d-lg-none"
+          onClick={() => setIsOpen(true)}
+        >
+          <FaBars />
+        </a>
 
           {/* LOGO */}
           <div className="logo">
@@ -290,6 +297,11 @@ const MainHeader = () => {
         </div>
 
       </div>
+
+      <MobileMenu
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />
 
     </div>
   );

@@ -38,7 +38,7 @@ const promoData = {
       id: 4,
       className: "headphones",
       image: headphones,
-      title: "Trending Hot Sales",
+      title: "Electronic Deals",
       subtitle: "Starting At ₹99",
     },
     {

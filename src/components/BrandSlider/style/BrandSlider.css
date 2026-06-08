@@ -1,0 +1,39 @@
+.brand-slider {
+  padding: 20px 0;
+  background: var(--white-color);
+}
+
+.brand-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.brand-item img {
+  max-width: 170px;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+.brand-item:hover img {
+  opacity: 0.5;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .brand-slider {
+    padding: 40px 0;
+  }
+
+  .brand-item {
+    height: 80px;
+  }
+
+  .brand-item img {
+    max-width: 120px;
+  }
+}
