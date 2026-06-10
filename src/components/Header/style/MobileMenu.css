@@ -139,7 +139,7 @@
     padding: 0;
 }
 
-.submenu a {
+.mobile-menu .submenu a {
   display: block;
 
   padding: 12px 40px;
