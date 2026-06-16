@@ -54,8 +54,39 @@ html{
   --light-color: #bde1f5;
   --footer-text: #a8a8a8;
   --green-color:#2eb872;
+  --light-text-2: #7b858a;
 
   /* Fonts */
   --primary-font: 'Poppins', sans-serif;
 
+}
+
+
+.main-btn{
+  padding: 16px 30px;
+  background: var(--black-color);
+  color: var(--white-color);
+  font-size: 16px;
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+
+.main-btn:hover{
+  background: var(--primary-color);
+}
+
+.breadcrumb-section .breadcrumb-content a{
+     color: var(--primary-color);
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.breadcrumb-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 0;
 }

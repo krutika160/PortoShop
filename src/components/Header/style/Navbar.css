@@ -316,9 +316,19 @@
     background: var(--bg-light);
 }
 
+.navbar-menu .active {
+  color: var(--primary-color);
+}
+
 /* =========================
    RESPONSIVE
 ========================= */
+
+@media (max-width: 992px){
+    .navbar-menu{
+        gap:24px;
+    }
+}
 
 @media (max-width: 991px){
 

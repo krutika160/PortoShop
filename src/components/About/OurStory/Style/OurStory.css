@@ -1,0 +1,20 @@
+.our-story-section {
+    padding: 30px 0;
+}
+
+.story-title{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+}
+
+.story-text {
+    font-size: 14px;
+    color: var(--light-text-2);
+}
+
+.story-quote {
+    font-size: 18px;
+    color: var(--black-color);
+}

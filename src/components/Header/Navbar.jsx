@@ -1,6 +1,6 @@
 import "./style/Navbar.css";
 
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa";
 
 import { navbarData } from "../../data/megaMenuData";
@@ -13,9 +13,17 @@ const Navbar = () => {
         <div className="navbar-wrapper">
           <ul className="navbar-menu">
             
-            <li className="active">
-              <Link to="/">Home</Link>
-            </li>
+            <li>
+  <NavLink
+    to="/"
+    className={({ isActive }) =>
+      isActive ? "active" : ""
+    }
+    end
+  >
+    Home
+  </NavLink>
+</li>
 
             <li className="menu-wrapper">
               <div className="menu-item">
@@ -159,12 +167,28 @@ const Navbar = () => {
               </div>
             </li>
 
+           
+
             <li>
-              <Link to="/about">About Us</Link>
+              <NavLink
+                  to="/about"
+                  className={({ isActive }) =>
+                    isActive ? "active" : ""
+                  }
+                >
+                  About Us
+              </NavLink>
             </li>
 
             <li>
-              <a href="#">Contact Us</a>
+              <NavLink
+                  to="/contact"
+                  className={({ isActive }) =>
+                    isActive ? "active" : ""
+                  }
+                >
+                  Contact Us
+              </NavLink>
             </li>
           </ul>
 
