@@ -1,6 +1,7 @@
 import "./style/TopBar.css";
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import {
   FaFacebookF,
@@ -9,122 +10,127 @@ import {
   FaAngleDown,
 } from "react-icons/fa";
 
+import LoginModal from "../LoginModal/LoginModal";
+
 const TopBar = () => {
-
-  /* Separate States */
-
   const [showLanguage, setShowLanguage] = useState(false);
-
   const [showCurrency, setShowCurrency] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
 
   return (
-    <div className="top-bar">
+    <>
+      <div className="top-bar">
+        <div className="container">
+          <div className="top-bar-wrapper">
+            {/* Left Side */}
+            <div className="top-bar-left">
+              <p>
+                FREE RETURNS. STANDARD SHIPPING ORDERS $99+
+              </p>
+            </div>
 
-      <div className="container">
+            {/* Right Side */}
+            <div className="top-bar-right">
 
-        <div className="top-bar-wrapper">
+              {/* Menu */}
+              <ul className="top-menu d-none d-lg-flex">
+                <li>
+                  <Link to="/my-account">
+                    My Account
+                  </Link>
+                </li>
 
-          {/* Left Side */}
-          <div className="top-bar-left">
+                <li>
+                  <a href="#">Contact Us</a>
+                </li>
 
-            <p>
-              FREE RETURNS. STANDARD SHIPPING ORDERS $99+
-            </p>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
 
-          </div>
+                <li>
+                  <a href="#">My Wishlist</a>
+                </li>
 
-          {/* Right Side */}
-          <div className="top-bar-right">
+                <li>
+                  <a href="#">Cart</a>
+                </li>
 
-            {/* Menu */}
-            <ul className="top-menu d-none d-lg-flex">
+                <li>
+                  <button
+                    className="login-link"
+                    onClick={() => setShowLogin(true)}
+                  >
+                    Log In
+                  </button>
+                </li>
+              </ul>
 
-              <li><a href="#">My Account</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">My Wishlist</a></li>
-              <li><a href="#">Cart</a></li>
-              <li><a href="#">Log In</a></li>
+              {/* Dropdowns */}
+              <div className="top-dropdowns">
+                {/* Language */}
+                <div
+                  className="currency-wrapper"
+                  onClick={() =>
+                    setShowLanguage(!showLanguage)
+                  }
+                >
+                  <div className="dropdown-item">
+                    ENG <FaAngleDown />
+                  </div>
 
-            </ul>
-
-            {/* Dropdowns */}
-            <div className="top-dropdowns">
-
-              {/* LANGUAGE */}
-              <div
-                className="currency-wrapper"
-                onClick={() => setShowLanguage(!showLanguage)}
-              >
-
-                <div className="dropdown-item">
-                  ENG <FaAngleDown />
-                </div>
-
-                {
-                  showLanguage && (
+                  {showLanguage && (
                     <ul className="currency-menu">
-
                       <li>ENG</li>
-
                       <li>FRA</li>
-
                     </ul>
-                  )
-                }
-
-              </div>
-
-              {/* CURRENCY */}
-              <div
-                className="currency-wrapper"
-                onClick={() => setShowCurrency(!showCurrency)}
-              >
-
-                <div className="dropdown-item">
-                  USD <FaAngleDown />
+                  )}
                 </div>
 
-                {
-                  showCurrency && (
+                {/* Currency */}
+                <div
+                  className="currency-wrapper"
+                  onClick={() =>
+                    setShowCurrency(!showCurrency)
+                  }
+                >
+                  <div className="dropdown-item">
+                    USD <FaAngleDown />
+                  </div>
+
+                  {showCurrency && (
                     <ul className="currency-menu">
-
                       <li>EUR</li>
-
                       <li>USD</li>
-
                     </ul>
-                  )
-                }
-
+                  )}
+                </div>
               </div>
 
+              {/* Social Icons */}
+              <div className="top-social">
+                <span className="icon-box">
+                  <FaFacebookF />
+                </span>
+
+                <span className="icon-box">
+                  <FaTwitter />
+                </span>
+
+                <span className="icon-box">
+                  <FaInstagram />
+                </span>
+              </div>
             </div>
-
-            {/* Social Icons */}
-            <div className="top-social">
-
-              <span className="icon-box">
-                <FaFacebookF />
-              </span>
-
-              <span className="icon-box">
-                <FaTwitter />
-              </span>
-
-              <span className="icon-box">
-                <FaInstagram />
-              </span>
-
-            </div>
-
           </div>
-
         </div>
-
       </div>
 
-    </div>
+      <LoginModal
+        isOpen={showLogin}
+        onClose={() => setShowLogin(false)}
+      />
+    </>
   );
 };
 

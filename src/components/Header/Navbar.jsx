@@ -14,16 +14,16 @@ const Navbar = () => {
           <ul className="navbar-menu">
             
             <li>
-  <NavLink
-    to="/"
-    className={({ isActive }) =>
-      isActive ? "active" : ""
-    }
-    end
-  >
-    Home
-  </NavLink>
-</li>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "active" : ""
+                }
+                end
+              >
+                Home
+              </NavLink>
+            </li>
 
             <li className="menu-wrapper">
               <div className="menu-item">
